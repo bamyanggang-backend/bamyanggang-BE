@@ -1,6 +1,12 @@
 name: Java CI with Gradle # Workflow 이름
 run-name: Running
 on:
+  workflow_dispatch:
+   inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'# 수동 실행 트리거
   push:
     branches:
       - production
