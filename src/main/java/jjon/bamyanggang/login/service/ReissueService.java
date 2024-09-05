@@ -16,7 +16,6 @@ import jjon.bamyanggang.login.jwt.JwtUtil;
 import jjon.bamyanggang.login.repository.RefreshRepository;
 
 @Service
-
 // JWT를 재발급하는 서비스 클래스입니다.
 public class ReissueService {
 
