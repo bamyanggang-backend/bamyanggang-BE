@@ -37,12 +37,8 @@ jobs: # 병렬로 실행되는 작업 단위, 여러 step으로 이루어짐
       run: zip -r ./practice-deploy.zip .
       shell: bash
     
-    # AWS 권한 확인
-    - name: Configure AWS credentials
+    - name: Upload to S3
       env:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    
-    # 압축한 프로젝트를 S3로 전송
-    - name: Upload to S3
       run: aws s3 cp --region ap-northeast-2 ./practice-deploy.zip s3://cammoabucket/practice-deploy.zip
