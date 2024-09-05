@@ -1,4 +1,4 @@
-name: CICD Test
+name: Java CI with Gradle # Workflow 이름
 run-name: Running
 on:
   push:
